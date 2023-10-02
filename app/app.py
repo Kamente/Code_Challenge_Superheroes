@@ -95,5 +95,37 @@ def create_hero_power():
     return jsonify(hero.as_dict()), 200
 
 
+@app.route('/heroes', methods=['POST'])
+def create_hero():
+    data = request.get_json()
+    name = data.get('name')
+    super_name = data.get('super_name')
+
+    if not name or not super_name:
+        return jsonify({'error': ['Validation Errors']}), 400
+
+    hero = Hero(name=name, super_name=super_name)
+    db.session.add(hero)
+    db.session.commit()
+
+    return jsonify({'id': hero.id, 'name': hero.name, 'super_name': hero.super_name}), 201
+
+
+@app.route('/powers', methods=['POST'])
+def create_power():
+    data = request.get_json()
+    name = data.get('name')
+    description = data.get('description')
+
+    if not name or not description:
+        return jsonify({'error': 'Validation error'})
+
+    power = Power(name=name, description=description)
+    db.session.add(power)
+    db.session.commit()
+
+    return jsonify({'id': power.id, 'name': power.name, 'description': power.description}), 201
+
+
 if __name__ == '__main__':
     app.run(port=5555, debug=True)
