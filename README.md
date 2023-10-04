@@ -1,4 +1,4 @@
-## Pizza_Restaurants CodeChallenge
+## CodeChallenge SuperHeros
 
 
 ## Author
@@ -13,7 +13,7 @@ KAMENTE JUSTIN
 
 ```
 Building a Flask API and applying the HTTP methods to test the running Flask Server and 
-the requests making
+the requests making. Also linking it with the working of the React Frontend
 HTTP methods used:
 - GET
 - DELETE
@@ -23,13 +23,15 @@ HTTP methods used:
 
 ## Code set up 
 
-- Git clone <https://github.com/Kamente/P4_Code_Challenge_Wk1> to a local folder
+- Git clone <https://github.com/Kamente/Code_Challenge_Superheroes> to a local folder
 - Open the folder in the vscode
 - Run the code and get a live link for testing the working of the methods. Can use POSTMAN to acheive that.
+- Also run the react application to see the website's user interface 
 
 ## Technologies Used
 
 ```
+- React Js
 - Python
 - VsCode
 - Github
