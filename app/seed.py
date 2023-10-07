@@ -51,4 +51,3 @@ for hero in heroes:
 db.session.commit()
 
 print("🦸‍♀️ Done seeding!")
-
